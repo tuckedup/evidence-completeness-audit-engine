@@ -1,0 +1,10 @@
+{
+  "comparisons": 400,
+  "config_version": "a631c1d4021cdc80",
+  "mismatch_count": 0,
+  "mismatch_indexes": [],
+  "records": 200,
+  "rerun_agreement": 1.0,
+  "runs": 3,
+  "schema_version": "1"
+}

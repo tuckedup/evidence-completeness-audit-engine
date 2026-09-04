@@ -1,0 +1,1003 @@
+{
+  "dataset": {
+    "examples": 30,
+    "gold_spans": 45,
+    "kind": "repository-authored synthetic smoke set",
+    "limitation": "This detects adapter/runtime regressions but is not a clinical-corpus accuracy estimate."
+  },
+  "determinism": {
+    "examples": 30,
+    "mismatch_count": 0,
+    "mismatch_indexes": [],
+    "runs": 2
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.13"
+  },
+  "exact_span_and_label": {
+    "f1": 0.537037037037037,
+    "false_negatives": 16,
+    "false_positives": 34,
+    "precision": 0.4603174603174603,
+    "recall": 0.6444444444444445,
+    "true_positives": 29
+  },
+  "examples": [
+    {
+      "false_negatives": 1,
+      "false_positives": 1,
+      "gold": [
+        [
+          11,
+          27,
+          "sample size"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 14,
+          "label": "sample size",
+          "score": 0.832477867603302,
+          "start": 11,
+          "text": "120"
+        }
+      ],
+      "text": "A total of 120 participants were randomized.",
+      "true_positives": 0
+    },
+    {
+      "false_negatives": 1,
+      "false_positives": 1,
+      "gold": [
+        [
+          19,
+          30,
+          "sample size"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 21,
+          "label": "sample size",
+          "score": 0.8172462582588196,
+          "start": 19,
+          "text": "84"
+        }
+      ],
+      "text": "The trial enrolled 84 patients.",
+      "true_positives": 0
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 0,
+      "gold": [
+        [
+          16,
+          21,
+          "sample size"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 21,
+          "label": "sample size",
+          "score": 0.8490002155303955,
+          "start": 16,
+          "text": "n=246"
+        }
+      ],
+      "text": "Sample size was n=246 at baseline.",
+      "true_positives": 1
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 1,
+      "gold": [
+        [
+          12,
+          25,
+          "sample size"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 25,
+          "label": "sample size",
+          "score": 0.8789582848548889,
+          "start": 12,
+          "text": "73 volunteers"
+        },
+        {
+          "end": 44,
+          "label": "arm",
+          "score": 0.7112125158309937,
+          "start": 33,
+          "text": "final model"
+        }
+      ],
+      "text": "We analyzed 73 volunteers in the final model.",
+      "true_positives": 1
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 0,
+      "gold": [
+        [
+          4,
+          15,
+          "arm"
+        ],
+        [
+          25,
+          40,
+          "sample size"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 15,
+          "label": "arm",
+          "score": 0.9937582015991211,
+          "start": 4,
+          "text": "placebo arm"
+        },
+        {
+          "end": 40,
+          "label": "sample size",
+          "score": 0.8739951252937317,
+          "start": 25,
+          "text": "51 participants"
+        }
+      ],
+      "text": "The placebo arm included 51 participants.",
+      "true_positives": 2
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 0,
+      "gold": [
+        [
+          0,
+          17,
+          "arm"
+        ],
+        [
+          22,
+          26,
+          "sample size"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 17,
+          "label": "arm",
+          "score": 0.9706703424453735,
+          "start": 0,
+          "text": "Treatment group B"
+        },
+        {
+          "end": 26,
+          "label": "sample size",
+          "score": 0.8790158033370972,
+          "start": 22,
+          "text": "n=49"
+        }
+      ],
+      "text": "Treatment group B had n=49.",
+      "true_positives": 2
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 0,
+      "gold": [
+        [
+          25,
+          35,
+          "arm"
+        ],
+        [
+          45,
+          47,
+          "sample size"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 35,
+          "label": "arm",
+          "score": 0.9527498483657837,
+          "start": 25,
+          "text": "usual care"
+        },
+        {
+          "end": 47,
+          "label": "sample size",
+          "score": 0.8304206728935242,
+          "start": 45,
+          "text": "62"
+        }
+      ],
+      "text": "Participants assigned to usual care numbered 62.",
+      "true_positives": 2
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 0,
+      "gold": [
+        [
+          4,
+          17,
+          "arm"
+        ],
+        [
+          28,
+          39,
+          "sample size"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 17,
+          "label": "arm",
+          "score": 0.9929490089416504,
+          "start": 4,
+          "text": "high-dose arm"
+        },
+        {
+          "end": 39,
+          "label": "sample size",
+          "score": 0.8894985318183899,
+          "start": 28,
+          "text": "45 subjects"
+        }
+      ],
+      "text": "The high-dose arm contained 45 subjects.",
+      "true_positives": 2
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 1,
+      "gold": [
+        [
+          6,
+          11,
+          "subgroup"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 11,
+          "label": "subgroup",
+          "score": 0.9961339235305786,
+          "start": 6,
+          "text": "women"
+        },
+        {
+          "end": 33,
+          "label": "test statistic",
+          "score": 0.823684573173523,
+          "start": 17,
+          "text": "treatment effect"
+        }
+      ],
+      "text": "Among women, the treatment effect was larger.",
+      "true_positives": 1
+    },
+    {
+      "false_negatives": 1,
+      "false_positives": 1,
+      "gold": [
+        [
+          17,
+          29,
+          "subgroup"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 29,
+          "label": "subgroup",
+          "score": 0.9425179958343506,
+          "start": 4,
+          "text": "prespecified age subgroup"
+        }
+      ],
+      "text": "The prespecified age subgroup showed no heterogeneity.",
+      "true_positives": 0
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 1,
+      "gold": [
+        [
+          0,
+          22,
+          "subgroup"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 22,
+          "label": "subgroup",
+          "score": 0.6157550811767578,
+          "start": 0,
+          "text": "Patients with diabetes"
+        },
+        {
+          "end": 47,
+          "label": "subgroup",
+          "score": 0.9716467261314392,
+          "start": 34,
+          "text": "risk subgroup"
+        }
+      ],
+      "text": "Patients with diabetes formed the risk subgroup.",
+      "true_positives": 1
+    },
+    {
+      "false_negatives": 1,
+      "false_positives": 2,
+      "gold": [
+        [
+          20,
+          51,
+          "subgroup"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 32,
+          "label": "subgroup",
+          "score": 0.9023789763450623,
+          "start": 20,
+          "text": "participants"
+        },
+        {
+          "end": 51,
+          "label": "sample size",
+          "score": 0.681158721446991,
+          "start": 43,
+          "text": "65 years"
+        }
+      ],
+      "text": "Results differed in participants aged over 65 years.",
+      "true_positives": 0
+    },
+    {
+      "false_negatives": 1,
+      "false_positives": 2,
+      "gold": [
+        [
+          24,
+          33,
+          "p-value"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 25,
+          "label": "test statistic",
+          "score": 0.7006585001945496,
+          "start": 24,
+          "text": "p"
+        },
+        {
+          "end": 33,
+          "label": "p-value",
+          "score": 0.8781185746192932,
+          "start": 28,
+          "text": "0.032"
+        }
+      ],
+      "text": "The interaction yielded p = 0.032.",
+      "true_positives": 0
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 0,
+      "gold": [
+        [
+          25,
+          31,
+          "p-value"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 31,
+          "label": "p-value",
+          "score": 0.8991388082504272,
+          "start": 25,
+          "text": "p<.001"
+        }
+      ],
+      "text": "There was no difference (p<.001).",
+      "true_positives": 1
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 0,
+      "gold": [
+        [
+          29,
+          37,
+          "p-value"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 37,
+          "label": "p-value",
+          "score": 0.9254160523414612,
+          "start": 29,
+          "text": "P = .047"
+        }
+      ],
+      "text": "The reported probability was P = .047.",
+      "true_positives": 1
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 0,
+      "gold": [
+        [
+          24,
+          32,
+          "p-value"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 32,
+          "label": "p-value",
+          "score": 0.7431854605674744,
+          "start": 24,
+          "text": "p > 0.20"
+        }
+      ],
+      "text": "Evidence was weak, with p > 0.20.",
+      "true_positives": 1
+    },
+    {
+      "false_negatives": 1,
+      "false_positives": 2,
+      "gold": [
+        [
+          20,
+          32,
+          "test statistic"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 21,
+          "label": "test statistic",
+          "score": 0.7795983552932739,
+          "start": 20,
+          "text": "t"
+        },
+        {
+          "end": 32,
+          "label": "p-value",
+          "score": 0.7802050113677979,
+          "start": 28,
+          "text": "2.11"
+        }
+      ],
+      "text": "The comparison gave t(98) = 2.11.",
+      "true_positives": 0
+    },
+    {
+      "false_negatives": 1,
+      "false_positives": 2,
+      "gold": [
+        [
+          12,
+          25,
+          "test statistic"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 20,
+          "label": "test statistic",
+          "score": 0.879561722278595,
+          "start": 12,
+          "text": "F(2, 47)"
+        },
+        {
+          "end": 25,
+          "label": "p-value",
+          "score": 0.8012797236442566,
+          "start": 21,
+          "text": "4.30"
+        }
+      ],
+      "text": "We observed F(2, 47)=4.30.",
+      "true_positives": 0
+    },
+    {
+      "false_negatives": 1,
+      "false_positives": 3,
+      "gold": [
+        [
+          26,
+          38,
+          "test statistic"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 14,
+          "label": "test statistic",
+          "score": 0.7684453725814819,
+          "start": 4,
+          "text": "chi-square"
+        },
+        {
+          "end": 33,
+          "label": "test statistic",
+          "score": 0.7151559591293335,
+          "start": 26,
+          "text": "chi2(3)"
+        },
+        {
+          "end": 38,
+          "label": "p-value",
+          "score": 0.7956435084342957,
+          "start": 34,
+          "text": "8.71"
+        }
+      ],
+      "text": "The chi-square result was chi2(3)=8.71.",
+      "true_positives": 0
+    },
+    {
+      "false_negatives": 1,
+      "false_positives": 2,
+      "gold": [
+        [
+          17,
+          26,
+          "test statistic"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 13,
+          "label": "test statistic",
+          "score": 0.8934489488601685,
+          "start": 2,
+          "text": "z statistic"
+        },
+        {
+          "end": 26,
+          "label": "p-value",
+          "score": 0.8126272559165955,
+          "start": 17,
+          "text": "z = -1.96"
+        }
+      ],
+      "text": "A z statistic of z = -1.96 was reported.",
+      "true_positives": 0
+    },
+    {
+      "false_negatives": 1,
+      "false_positives": 2,
+      "gold": [
+        [
+          11,
+          20,
+          "event count"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 13,
+          "label": "sample size",
+          "score": 0.7736085653305054,
+          "start": 11,
+          "text": "12"
+        },
+        {
+          "end": 33,
+          "label": "arm",
+          "score": 0.6812177300453186,
+          "start": 24,
+          "text": "follow-up"
+        }
+      ],
+      "text": "There were 12 deaths in follow-up.",
+      "true_positives": 0
+    },
+    {
+      "false_negatives": 1,
+      "false_positives": 1,
+      "gold": [
+        [
+          23,
+          40,
+          "event count"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 25,
+          "label": "sample size",
+          "score": 0.6720643639564514,
+          "start": 23,
+          "text": "37"
+        }
+      ],
+      "text": "Investigators recorded 37 adverse events.",
+      "true_positives": 0
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 0,
+      "gold": [
+        [
+          5,
+          15,
+          "event count"
+        ],
+        [
+          32,
+          48,
+          "arm"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 15,
+          "label": "event count",
+          "score": 0.6140950918197632,
+          "start": 5,
+          "text": "4 relapses"
+        },
+        {
+          "end": 48,
+          "label": "arm",
+          "score": 0.9963250756263733,
+          "start": 32,
+          "text": "intervention arm"
+        }
+      ],
+      "text": "Only 4 relapses occurred in the intervention arm.",
+      "true_positives": 2
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 0,
+      "gold": [
+        [
+          4,
+          17,
+          "arm"
+        ],
+        [
+          30,
+          49,
+          "event count"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 17,
+          "label": "arm",
+          "score": 0.9862365126609802,
+          "start": 4,
+          "text": "control group"
+        },
+        {
+          "end": 49,
+          "label": "event count",
+          "score": 0.7987056970596313,
+          "start": 30,
+          "text": "19 hospitalizations"
+        }
+      ],
+      "text": "The control group experienced 19 hospitalizations.",
+      "true_positives": 2
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 0,
+      "gold": [
+        [
+          14,
+          30,
+          "sample size"
+        ],
+        [
+          32,
+          43,
+          "arm"
+        ],
+        [
+          48,
+          50,
+          "sample size"
+        ],
+        [
+          55,
+          65,
+          "arm"
+        ],
+        [
+          70,
+          72,
+          "sample size"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 30,
+          "label": "sample size",
+          "score": 0.7476242780685425,
+          "start": 14,
+          "text": "120 participants"
+        },
+        {
+          "end": 43,
+          "label": "arm",
+          "score": 0.9810066819190979,
+          "start": 32,
+          "text": "control arm"
+        },
+        {
+          "end": 50,
+          "label": "sample size",
+          "score": 0.792784571647644,
+          "start": 48,
+          "text": "58"
+        },
+        {
+          "end": 65,
+          "label": "arm",
+          "score": 0.9872322082519531,
+          "start": 55,
+          "text": "active arm"
+        },
+        {
+          "end": 72,
+          "label": "sample size",
+          "score": 0.742477297782898,
+          "start": 70,
+          "text": "62"
+        }
+      ],
+      "text": "We randomized 120 participants; control arm had 58 and active arm had 62.",
+      "true_positives": 5
+    },
+    {
+      "false_negatives": 2,
+      "false_positives": 4,
+      "gold": [
+        [
+          3,
+          8,
+          "subgroup"
+        ],
+        [
+          10,
+          20,
+          "test statistic"
+        ],
+        [
+          25,
+          31,
+          "p-value"
+        ],
+        [
+          38,
+          46,
+          "event count"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 8,
+          "label": "subgroup",
+          "score": 0.9921993613243103,
+          "start": 3,
+          "text": "women"
+        },
+        {
+          "end": 15,
+          "label": "test statistic",
+          "score": 0.8872566819190979,
+          "start": 10,
+          "text": "t(42)"
+        },
+        {
+          "end": 20,
+          "label": "p-value",
+          "score": 0.8309635519981384,
+          "start": 16,
+          "text": "2.45"
+        },
+        {
+          "end": 26,
+          "label": "p-value",
+          "score": 0.7427566051483154,
+          "start": 25,
+          "text": "p"
+        },
+        {
+          "end": 31,
+          "label": "p-value",
+          "score": 0.9215837121009827,
+          "start": 27,
+          "text": ".018"
+        },
+        {
+          "end": 46,
+          "label": "event count",
+          "score": 0.8747887015342712,
+          "start": 38,
+          "text": "9 events"
+        }
+      ],
+      "text": "In women, t(42)=2.45 and p=.018, with 9 events.",
+      "true_positives": 2
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 0,
+      "gold": [
+        [
+          4,
+          17,
+          "arm"
+        ],
+        [
+          19,
+          23,
+          "sample size"
+        ],
+        [
+          29,
+          37,
+          "event count"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 17,
+          "label": "arm",
+          "score": 0.9787281155586243,
+          "start": 4,
+          "text": "placebo group"
+        },
+        {
+          "end": 23,
+          "label": "sample size",
+          "score": 0.9783117175102234,
+          "start": 19,
+          "text": "n=40"
+        },
+        {
+          "end": 37,
+          "label": "event count",
+          "score": 0.9756637811660767,
+          "start": 29,
+          "text": "6 events"
+        }
+      ],
+      "text": "The placebo group (n=40) had 6 events.",
+      "true_positives": 3
+    },
+    {
+      "false_negatives": 3,
+      "false_positives": 6,
+      "gold": [
+        [
+          4,
+          26,
+          "subgroup"
+        ],
+        [
+          28,
+          39,
+          "test statistic"
+        ],
+        [
+          41,
+          47,
+          "p-value"
+        ]
+      ],
+      "predicted": [
+        {
+          "end": 10,
+          "label": "subgroup",
+          "score": 0.8828648924827576,
+          "start": 4,
+          "text": "adults"
+        },
+        {
+          "end": 26,
+          "label": "sample size",
+          "score": 0.5509344339370728,
+          "start": 24,
+          "text": "40"
+        },
+        {
+          "end": 35,
+          "label": "test statistic",
+          "score": 0.9640464782714844,
+          "start": 28,
+          "text": "F(1,88)"
+        },
+        {
+          "end": 39,
+          "label": "p-value",
+          "score": 0.5260268449783325,
+          "start": 36,
+          "text": "5.2"
+        },
+        {
+          "end": 42,
+          "label": "p-value",
+          "score": 0.6917552351951599,
+          "start": 41,
+          "text": "p"
+        },
+        {
+          "end": 47,
+          "label": "p-value",
+          "score": 0.9221475124359131,
+          "start": 43,
+          "text": ".025"
+        }
+      ],
+      "text": "For adults younger than 40, F(1,88)=5.2, p=.025.",
+      "true_positives": 0
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 2,
+      "gold": [],
+      "predicted": [
+        {
+          "end": 22,
+          "label": "sample size",
+          "score": 0.6522320508956909,
+          "start": 3,
+          "text": "participant numbers"
+        },
+        {
+          "end": 48,
+          "label": "test statistic",
+          "score": 0.780657172203064,
+          "start": 26,
+          "text": "inferential statistics"
+        }
+      ],
+      "text": "No participant numbers or inferential statistics were stated.",
+      "true_positives": 0
+    },
+    {
+      "false_negatives": 0,
+      "false_positives": 0,
+      "gold": [],
+      "predicted": [],
+      "text": "Blood pressure and glucose were measured at discharge.",
+      "true_positives": 0
+    }
+  ],
+  "generated_at": "2026-09-03T21:55:58.839446+00:00",
+  "model_id": "Ihor/gliner-biomed-base-v1.0",
+  "model_path": "C:\\At\\Projects\\Statistical_Audit_Engine\\data\\raw\\models\\gliner-biomed-base-v1.0",
+  "model_revision": "146c133ff9da643f738f9817bc38cee479cebe8c",
+  "schema_version": "1",
+  "timing": {
+    "inference_latency_ms_mean": 105.7513566648898,
+    "inference_latency_ms_p50": 94.77890003472567,
+    "inference_latency_ms_p95": 155.90000001247972,
+    "model_load_seconds": 9.41437670000596
+  },
+  "weight_sha256": "94549b98a099d516ce57c00480d1279469f97dd9b24daca8f133580d074a6c06"
+}

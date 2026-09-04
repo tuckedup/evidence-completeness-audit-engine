@@ -1,0 +1,72 @@
+{
+  "ci_to_p_oracle": {
+    "confidence_levels": [
+      90,
+      95,
+      99
+    ],
+    "failure_count": 0,
+    "failure_examples": [],
+    "max_absolute_error": 7.771561172376096e-16,
+    "oracle": "SciPy 1.16.1",
+    "samples": 5000,
+    "scales": [
+      "additive",
+      "ratio"
+    ],
+    "tolerance": 2e-10
+  },
+  "distribution_oracle": {
+    "failure_count": 0,
+    "failure_examples": [],
+    "max_absolute_error": 1.538769112130467e-12,
+    "oracle": "SciPy 1.16.1",
+    "samples": 30000,
+    "samples_by_statistic": {
+      "F": 5000,
+      "Q": 5000,
+      "chi2": 5000,
+      "r": 5000,
+      "t": 5000,
+      "z": 5000
+    },
+    "tolerance": 2e-10
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14",
+    "scipy": "1.16.1"
+  },
+  "external_reference_cases": {
+    "count": 20,
+    "note": "Executed by tests/test_regression.py, not by this generator.",
+    "sources": [
+      "https://github.com/MicheleNuijten/statcheck/tree/68376e18dc1c6f5c8a1e95b5146ec564c6c7ced9/tests/testthat",
+      "https://github.com/lhdjung/scrutiny/tree/a81cd540332cf402c1ffc798f93534c31da17009/tests/testthat"
+    ]
+  },
+  "generated_at": "2026-09-04T03:58:28.269431+00:00",
+  "known_integer_data": {
+    "generator": "uniform integer observations in [-3,9], n=3..50, half-up rounded mean/SD",
+    "grim_false_flag_count": 0,
+    "grim_false_flag_examples": [],
+    "grimmer_false_flag_count": 0,
+    "grimmer_false_flag_examples": [],
+    "samples": 20000
+  },
+  "limitations": [
+    "Generated integer data measure false-flag behavior on known-valid summaries, not sensitivity.",
+    "SciPy numerical agreement does not validate study extraction or clinical interpretation."
+  ],
+  "passed": true,
+  "schema_version": "1",
+  "seed": 20250903,
+  "welch_oracle": {
+    "failure_count": 0,
+    "failure_examples": [],
+    "max_absolute_error": 2.1471713296250527e-12,
+    "oracle": "SciPy 1.16.1",
+    "samples": 5000,
+    "tolerance": 2e-10
+  }
+}

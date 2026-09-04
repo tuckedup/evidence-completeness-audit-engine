@@ -1,0 +1,74 @@
+{
+  "blinding": "Pipeline output is retained for error taxonomy; two adjudicators must work independently and remain blinded to each other's labels.",
+  "generated_at": "2026-09-04T02:04:49.888461+00:00",
+  "queue": "eval\\adjudication_queue_200.csv",
+  "rows": 200,
+  "schema_version": "2",
+  "seed": 20250903,
+  "source": "data\\corpus\\ctg-randomized-2000.jsonl",
+  "source_sha256": "07f7c78355bab94e042fe9f827b0a0d30e31903ee5680fda2cc99c17e78f58dd",
+  "status": "awaiting two independent human adjudicators",
+  "strata": {
+    "BASELINE-ANOMALY:not_applicable": {
+      "available": 1368,
+      "filled_shortfall": 2,
+      "requested": 10,
+      "selected": 12
+    },
+    "BASELINE-ANOMALY:pass": {
+      "available": 627,
+      "requested": 20,
+      "selected": 20
+    },
+    "BASELINE-ANOMALY:warn": {
+      "available": 5,
+      "requested": 10,
+      "selected": 5
+    },
+    "REPORTING-COMPLETENESS:pass": {
+      "available": 247,
+      "requested": 15,
+      "selected": 15
+    },
+    "REPORTING-COMPLETENESS:warn": {
+      "available": 1753,
+      "filled_shortfall": 3,
+      "requested": 15,
+      "selected": 18
+    },
+    "STATCHECK:not_applicable": {
+      "available": 1535,
+      "filled_shortfall": 3,
+      "requested": 10,
+      "selected": 13
+    },
+    "STATCHECK:pass": {
+      "available": 219,
+      "requested": 35,
+      "selected": 35
+    },
+    "STATCHECK:warn": {
+      "available": 246,
+      "requested": 45,
+      "selected": 45
+    },
+    "SUBGROUP-PARTITION:not_applicable": {
+      "available": 34,
+      "requested": 10,
+      "selected": 10
+    },
+    "SUBGROUP-PARTITION:pass": {
+      "available": 1965,
+      "filled_shortfall": 6,
+      "requested": 20,
+      "selected": 26
+    },
+    "SUBGROUP-PARTITION:warn": {
+      "available": 1,
+      "requested": 10,
+      "selected": 1
+    }
+  },
+  "target_rows": 200,
+  "unit": "study-by-check-family; multiple analysis-level findings are aggregated"
+}

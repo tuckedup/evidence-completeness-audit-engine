@@ -1,0 +1,23 @@
+{
+  "accepted": 2000,
+  "api": "https://clinicaltrials.gov/api/v2/studies",
+  "downloaded_candidates": 2000,
+  "exclusions": {},
+  "license_note": "ClinicalTrials.gov records are U.S. Government public-domain data.",
+  "path": "C:\\At\\Projects\\Statistical_Audit_Engine\\data\\corpus\\ctg-randomized-2000.jsonl",
+  "request_parameters": {
+    "aggFilters": "results:with",
+    "filter.advanced": "AREA[DesignAllocation]RANDOMIZED AND AREA[StudyType]INTERVENTIONAL",
+    "filter.overallStatus": "COMPLETED"
+  },
+  "requested": 2000,
+  "retrieved_at": "2026-09-04T02:03:19.258824+00:00",
+  "schema_version": "2",
+  "sha256": "07f7c78355bab94e042fe9f827b0a0d30e31903ee5680fda2cc99c17e78f58dd",
+  "write_time_assertions": [
+    "COMPLETED",
+    "INTERVENTIONAL",
+    "RANDOMIZED",
+    "hasResults=true"
+  ]
+}

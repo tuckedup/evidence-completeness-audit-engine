@@ -1,0 +1,43 @@
+{
+  "ci_p_accounting": {
+    "eligible_before_cap": 6136,
+    "invariant_holds": true,
+    "processed_after_cap": 5999,
+    "processed_tiers": {
+      "approximate_review": 5735,
+      "high_confidence": 264
+    },
+    "truncated_due_to_cap": 137
+  },
+  "generated_at": "2026-09-04T03:58:38.449607+00:00",
+  "hydration": {
+    "arm_counts_marked_noncomparable": 2000,
+    "ci_p_analyses_truncated": 137,
+    "ci_p_approximate_review_analyses_processed": 5735,
+    "ci_p_eligible_analyses_before_cap": 6136,
+    "ci_p_eligible_analyses_processed": 5999,
+    "ci_p_high_confidence_analyses_processed": 264,
+    "with_analysis_population_description": 1502,
+    "with_baseline_comparisons": 1413,
+    "with_baseline_mean_sd_summaries": 1530,
+    "with_baseline_subgroup_partitions": 1966,
+    "with_ci_p_eligible_analyses": 465,
+    "with_participant_flow_arm_counts": 1999,
+    "with_reported_outcome_analyses": 931,
+    "with_two_or_more_flow_arms": 1966
+  },
+  "interpretation": "Every persisted record passes the completed/interventional/randomized/results-posted invariants. Hydration counts describe available registry fields, not audit accuracy. Participant-flow STARTED counts are intentionally not equated with protocol enrollment.",
+  "manifest": "eval\\results\\corpus-ctg-randomized-2000.json",
+  "manifest_checks": {
+    "accepted_count_matches": true,
+    "checksum_matches": true,
+    "hard_filters_match": true
+  },
+  "passed": true,
+  "record_invariant_failures": {},
+  "records": 2000,
+  "schema_version": "2",
+  "snapshot_sha256": "07f7c78355bab94e042fe9f827b0a0d30e31903ee5680fda2cc99c17e78f58dd",
+  "source": "ClinicalTrials.gov API v2",
+  "unique_study_ids": 2000
+}

@@ -1,0 +1,187 @@
+{
+  "ci_p_accounting": {
+    "eligible_before_cap": 6136,
+    "invariant_holds": true,
+    "processed_after_cap": 5999,
+    "processed_tiers": {
+      "approximate_review": 5735,
+      "high_confidence": 264
+    },
+    "truncated_due_to_cap": 137
+  },
+  "completeness_score": {
+    "mean": 0.7717780055000001,
+    "p05": 0.555556,
+    "p50": 0.777778,
+    "p95": 1.0
+  },
+  "config_version": "4eafe294bdd8de8b",
+  "corpus": "data\\corpus\\ctg-randomized-2000.jsonl",
+  "corpus_sha256": "07f7c78355bab94e042fe9f827b0a0d30e31903ee5680fda2cc99c17e78f58dd",
+  "generated_at": "2026-09-04T03:58:37.852859+00:00",
+  "interpretation": "Counts are automated screening outcomes, not adjudicated errors or misconduct findings.",
+  "overall_verdicts": {
+    "pass": 134,
+    "warn": 1866
+  },
+  "records": 2000,
+  "registry_hydration": {
+    "ci_p_analyses_truncated": 137,
+    "ci_p_approximate_review_analyses_processed": 5735,
+    "ci_p_eligible_analyses_before_cap": 6136,
+    "ci_p_eligible_analyses_processed": 5999,
+    "ci_p_high_confidence_analyses_processed": 264,
+    "studies_with_analysis_population_description": 1502,
+    "studies_with_baseline_comparisons": 1413,
+    "studies_with_ci_p_eligible_analyses": 465,
+    "studies_with_mean_sd_summaries": 1530,
+    "studies_with_reported_analyses": 931,
+    "studies_with_subgroup_partitions": 1966
+  },
+  "rule_study_outcomes": {
+    "BASELINE-ANOMALY": {
+      "applicable_studies": 632,
+      "flag_rate_among_applicable": 0.0,
+      "not_applicable": 1368,
+      "not_applicable_by_record": 1368,
+      "pass": 627,
+      "warn": 5
+    },
+    "ENROLLMENT-ARM-SUM": {
+      "applicable_studies": 0,
+      "flag_rate_among_applicable": null,
+      "not_applicable": 2000,
+      "not_applicable_by_source_schema": 2000
+    },
+    "GRIM": {
+      "applicable_studies": 0,
+      "flag_rate_among_applicable": null,
+      "not_applicable": 2000,
+      "not_applicable_by_source_schema": 2000
+    },
+    "GRIMMER": {
+      "applicable_studies": 0,
+      "flag_rate_among_applicable": null,
+      "not_applicable": 2000,
+      "not_applicable_by_source_schema": 2000
+    },
+    "REPORTING-COMPLETENESS": {
+      "applicable_studies": 2000,
+      "flag_rate_among_applicable": 0.0,
+      "pass": 247,
+      "warn": 1753
+    },
+    "STATCHECK": {
+      "applicable_studies": 465,
+      "flag_rate_among_applicable": 0.0,
+      "not_applicable": 1535,
+      "not_applicable_by_record": 1535,
+      "pass": 219,
+      "warn": 246
+    },
+    "SUBGROUP-EVENT-FLOOR": {
+      "applicable_studies": 0,
+      "flag_rate_among_applicable": null,
+      "not_applicable": 2000,
+      "not_applicable_by_source_schema": 2000
+    },
+    "SUBGROUP-EXPECTED-CELL": {
+      "applicable_studies": 0,
+      "flag_rate_among_applicable": null,
+      "not_applicable": 2000,
+      "not_applicable_by_source_schema": 2000
+    },
+    "SUBGROUP-INTERACTION-POWER": {
+      "applicable_studies": 0,
+      "flag_rate_among_applicable": null,
+      "not_applicable": 2000,
+      "not_applicable_by_source_schema": 2000
+    },
+    "SUBGROUP-INTERACTION-TEST": {
+      "applicable_studies": 0,
+      "flag_rate_among_applicable": null,
+      "not_applicable": 2000,
+      "not_applicable_by_source_schema": 2000
+    },
+    "SUBGROUP-PARTITION": {
+      "applicable_studies": 1966,
+      "flag_rate_among_applicable": 0.0,
+      "not_applicable": 34,
+      "not_applicable_by_record": 34,
+      "pass": 1965,
+      "warn": 1
+    },
+    "SUBGROUP-PERCENT": {
+      "applicable_studies": 0,
+      "flag_rate_among_applicable": null,
+      "not_applicable": 2000,
+      "not_applicable_by_source_schema": 2000
+    }
+  },
+  "rule_verdicts": {
+    "BASELINE-ANOMALY": {
+      "not_applicable": 1368,
+      "pass": 627,
+      "warn": 5
+    },
+    "ENROLLMENT-ARM-SUM": {
+      "not_applicable": 2000
+    },
+    "GRIM": {
+      "not_applicable": 8878
+    },
+    "GRIMMER": {
+      "not_applicable": 8878
+    },
+    "REPORTING-COMPLETENESS": {
+      "pass": 247,
+      "warn": 1753
+    },
+    "STATCHECK": {
+      "not_applicable": 1535,
+      "pass": 4286,
+      "warn": 1713
+    },
+    "SUBGROUP-EVENT-FLOOR": {
+      "not_applicable": 4546
+    },
+    "SUBGROUP-EXPECTED-CELL": {
+      "not_applicable": 4546
+    },
+    "SUBGROUP-INTERACTION-POWER": {
+      "not_applicable": 4546
+    },
+    "SUBGROUP-INTERACTION-TEST": {
+      "not_applicable": 4546
+    },
+    "SUBGROUP-PARTITION": {
+      "not_applicable": 34,
+      "pass": 4509,
+      "warn": 3
+    },
+    "SUBGROUP-PERCENT": {
+      "not_applicable": 4546
+    }
+  },
+  "rules_version": "1.2.0",
+  "schema_version": "1",
+  "source_schema_capability": {
+    "interpretation": "ClinicalTrials.gov API v2 lacks the source fields or provenance required for these rules; record-level absence is counted separately.",
+    "supported_rules": [
+      "BASELINE-ANOMALY",
+      "REPORTING-COMPLETENESS",
+      "STATCHECK",
+      "SUBGROUP-PARTITION"
+    ],
+    "unavailable_rules": [
+      "ENROLLMENT-ARM-SUM",
+      "GRIM",
+      "GRIMMER",
+      "SUBGROUP-PERCENT",
+      "SUBGROUP-INTERACTION-TEST",
+      "SUBGROUP-INTERACTION-POWER",
+      "SUBGROUP-EVENT-FLOOR",
+      "SUBGROUP-EXPECTED-CELL"
+    ]
+  }
+}

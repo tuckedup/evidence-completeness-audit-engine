@@ -1,0 +1,14 @@
+{
+  "comparisons": 4000,
+  "config_version": "4eafe294bdd8de8b",
+  "corpus_path": "data\\corpus\\ctg-randomized-2000.jsonl",
+  "corpus_sha256": "07f7c78355bab94e042fe9f827b0a0d30e31903ee5680fda2cc99c17e78f58dd",
+  "mismatch_count": 0,
+  "mismatch_indexes": [],
+  "model_revision": "regex-biomed-v1",
+  "records": 2000,
+  "rerun_agreement": 1.0,
+  "rules_version": "1.2.0",
+  "runs": 3,
+  "schema_version": "1"
+}

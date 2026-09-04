@@ -1,0 +1,25 @@
+[engine]
+config_schema_version = "1"
+rules_version = "1.2.0"
+model_revision = "regex-biomed-v1"
+alpha = 0.05
+stat_tolerance = 1e-12
+interaction_sample_multiplier = 4.0
+min_events_per_parameter = 10
+min_expected_cell_count = 5.0
+baseline_extreme_p = 0.001
+cache_ttl_seconds = 86400
+memory_cache_entries = 4096
+
+[completeness.weights]
+randomized_n = 1.0
+arm_sizes = 1.0
+analysis_population = 1.0
+primary_outcome = 1.0
+effect_estimate = 1.0
+precision = 1.0
+harms = 1.0
+protocol_registration = 1.0
+data_sharing = 1.0
+conflicts_of_interest = 1.0
+patient_public_involvement = 1.0

@@ -1,0 +1,57 @@
+{
+  "case_id": "REG-115",
+  "category": "subgroup_partition",
+  "expected": {
+    "completeness_score": 1.0,
+    "config_version": "4eafe294bdd8de8b",
+    "feasibility_verdict": "pass",
+    "fingerprint": "fcb44842ebf28c897dd56299c6aa0e67f1997baab953c88bffba0d31700f6186",
+    "flag_rule_ids": [],
+    "rules_version": "1.2.0"
+  },
+  "input_record": {
+    "analyzed_n": 109,
+    "arm_ns": {
+      "control": 54,
+      "intervention": 55
+    },
+    "randomized_n": 109,
+    "reporting": {
+      "conflicts_of_interest": true,
+      "data_sharing": true,
+      "effect_estimate": true,
+      "harms": true,
+      "patient_public_involvement": true,
+      "precision": true,
+      "primary_outcome": true,
+      "protocol_registration": true
+    },
+    "source": "versioned synthetic regression fixture",
+    "study_id": "REG-095",
+    "subgroups": [
+      {
+        "exhaustive": true,
+        "levels": [
+          {
+            "n": 54,
+            "name": "younger",
+            "percentage": 49.5
+          },
+          {
+            "n": 55,
+            "name": "older",
+            "percentage": 50.5
+          }
+        ],
+        "variable": "age band"
+      }
+    ]
+  },
+  "operation": "audit",
+  "provenance": {
+    "kind": "engine_snapshot",
+    "project": "ecsae"
+  },
+  "rationale": "Enrollment, partition, and integer percentage arithmetic",
+  "schema_version": "2"
+}

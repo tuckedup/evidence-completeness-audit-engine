@@ -1,0 +1,63 @@
+{
+  "case_id": "REG-204",
+  "category": "adversarial",
+  "expected": {
+    "completeness_score": 1.0,
+    "config_version": "4eafe294bdd8de8b",
+    "feasibility_verdict": "warn",
+    "fingerprint": "49f520224e5fd35c20fafa63655823e0e6b8c6b1d813f821a88cb64fdd34caf7",
+    "flag_rule_ids": [],
+    "rules_version": "1.2.0"
+  },
+  "input_record": {
+    "analyzed_n": 150,
+    "arm_ns": {
+      "control": 75,
+      "intervention": 75
+    },
+    "randomized_n": 150,
+    "reporting": {
+      "conflicts_of_interest": true,
+      "data_sharing": true,
+      "effect_estimate": true,
+      "harms": true,
+      "patient_public_involvement": true,
+      "precision": true,
+      "primary_outcome": true,
+      "protocol_registration": true
+    },
+    "source": "versioned synthetic regression fixture",
+    "study_id": "REG-184",
+    "subgroups": [
+      {
+        "contingency_cells": [
+          2,
+          4,
+          70,
+          74
+        ],
+        "estimated_parameters": 2,
+        "levels": [
+          {
+            "events": 2,
+            "n": 75,
+            "name": "low"
+          },
+          {
+            "events": 8,
+            "n": 75,
+            "name": "high"
+          }
+        ],
+        "variable": "event risk"
+      }
+    ]
+  },
+  "operation": "audit",
+  "provenance": {
+    "kind": "engine_snapshot",
+    "project": "ecsae"
+  },
+  "rationale": "Applicability, sparse cells, adjusted p, or rounding edge",
+  "schema_version": "2"
+}

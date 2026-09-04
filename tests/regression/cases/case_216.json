@@ -1,0 +1,69 @@
+{
+  "case_id": "REG-216",
+  "category": "realistic",
+  "expected": {
+    "completeness_score": 1.0,
+    "config_version": "4eafe294bdd8de8b",
+    "feasibility_verdict": "pass",
+    "fingerprint": "0696d1ec4256344d54c3442b077b427fc5763d8acd4e761be58df3358db3c968",
+    "flag_rule_ids": [],
+    "rules_version": "1.2.0"
+  },
+  "input_record": {
+    "analyzed_n": 250,
+    "arm_ns": {
+      "control": 125,
+      "intervention": 125
+    },
+    "randomized_n": 250,
+    "reported_stats": [
+      {
+        "df1": 1,
+        "p_decimals": 2,
+        "reported_p": 0.05,
+        "stat_type": "chi2",
+        "value": 3.84
+      }
+    ],
+    "reporting": {
+      "conflicts_of_interest": true,
+      "data_sharing": true,
+      "effect_estimate": true,
+      "harms": true,
+      "patient_public_involvement": true,
+      "precision": true,
+      "primary_outcome": true,
+      "protocol_registration": true
+    },
+    "source": "de-identified realistic fixture",
+    "study_id": "NCT-FIXTURE-0005",
+    "subgroups": [
+      {
+        "effect_claimed": false,
+        "formal_interaction_test": true,
+        "levels": [
+          {
+            "events": 29,
+            "n": 125,
+            "name": "female"
+          },
+          {
+            "events": 27,
+            "n": 125,
+            "name": "male"
+          }
+        ],
+        "powered_for_interaction": true,
+        "prespecified": true,
+        "variable": "sex"
+      }
+    ]
+  },
+  "operation": "audit",
+  "provenance": {
+    "kind": "engine_snapshot",
+    "project": "ecsae"
+  },
+  "rationale": "Multi-rule integration fixture shaped like a controlled study",
+  "schema_version": "2"
+}

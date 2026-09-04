@@ -1,0 +1,49 @@
+{
+  "case_id": "REG-023",
+  "category": "statcheck",
+  "expected": {
+    "completeness_score": 1.0,
+    "config_version": "4eafe294bdd8de8b",
+    "feasibility_verdict": "pass",
+    "fingerprint": "52e67439c4b4b0d726cdc7cbb0cfe53fd057803ec2d5d981015a08a20328610f",
+    "flag_rule_ids": [],
+    "rules_version": "1.2.0"
+  },
+  "input_record": {
+    "analyzed_n": 84,
+    "arm_ns": {
+      "control": 42,
+      "intervention": 42
+    },
+    "randomized_n": 84,
+    "reported_stats": [
+      {
+        "df1": 4,
+        "p_decimals": 3,
+        "reported_p": 0.769,
+        "stat_type": "chi2",
+        "statistic_decimals": 2,
+        "value": 1.8199999999999998
+      }
+    ],
+    "reporting": {
+      "conflicts_of_interest": true,
+      "data_sharing": true,
+      "effect_estimate": true,
+      "harms": true,
+      "patient_public_involvement": true,
+      "precision": true,
+      "primary_outcome": true,
+      "protocol_registration": true
+    },
+    "source": "versioned synthetic regression fixture",
+    "study_id": "REG-003"
+  },
+  "operation": "audit",
+  "provenance": {
+    "kind": "engine_snapshot",
+    "project": "ecsae"
+  },
+  "rationale": "APA-style recomputation with rounding interval",
+  "schema_version": "2"
+}

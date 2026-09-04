@@ -1,0 +1,60 @@
+{
+  "case_id": "REG-139",
+  "category": "interaction_power",
+  "expected": {
+    "completeness_score": 1.0,
+    "config_version": "4eafe294bdd8de8b",
+    "feasibility_verdict": "pass",
+    "fingerprint": "3b357b669dcdedff704e87ac77978a46973561a543dc9a120e075fcdaa6a6e4c",
+    "flag_rule_ids": [],
+    "rules_version": "1.2.0"
+  },
+  "input_record": {
+    "analyzed_n": 500,
+    "arm_ns": {
+      "control": 250,
+      "intervention": 250
+    },
+    "randomized_n": 500,
+    "reporting": {
+      "conflicts_of_interest": true,
+      "data_sharing": true,
+      "effect_estimate": true,
+      "harms": true,
+      "patient_public_involvement": true,
+      "precision": true,
+      "primary_outcome": true,
+      "protocol_registration": true
+    },
+    "source": "versioned synthetic regression fixture",
+    "study_id": "REG-119",
+    "subgroups": [
+      {
+        "effect_claimed": true,
+        "formal_interaction_test": true,
+        "interaction_p": 0.03,
+        "levels": [
+          {
+            "n": 250,
+            "name": "negative"
+          },
+          {
+            "n": 250,
+            "name": "positive"
+          }
+        ],
+        "main_effect_required_n": 100,
+        "powered_for_interaction": false,
+        "prespecified": false,
+        "variable": "biomarker"
+      }
+    ]
+  },
+  "operation": "audit",
+  "provenance": {
+    "kind": "engine_snapshot",
+    "project": "ecsae"
+  },
+  "rationale": "formal interaction-test criterion and Brookes-derived heuristic",
+  "schema_version": "2"
+}

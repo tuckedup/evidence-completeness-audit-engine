@@ -1,0 +1,36 @@
+{
+  "case_id": "REG-208",
+  "category": "adversarial",
+  "expected": {
+    "completeness_score": 0.909091,
+    "config_version": "4eafe294bdd8de8b",
+    "feasibility_verdict": "warn",
+    "fingerprint": "208e124c7001cee595d3078320fc0dd77b094e49c4a029988487fb54bb5fffbd",
+    "flag_rule_ids": [],
+    "rules_version": "1.2.0"
+  },
+  "input_record": {
+    "analyzed_n": 150,
+    "arm_ns": {},
+    "randomized_n": 150,
+    "reporting": {
+      "conflicts_of_interest": true,
+      "data_sharing": true,
+      "effect_estimate": true,
+      "harms": true,
+      "patient_public_involvement": true,
+      "precision": true,
+      "primary_outcome": true,
+      "protocol_registration": true
+    },
+    "source": "versioned synthetic regression fixture",
+    "study_id": "REG-188"
+  },
+  "operation": "audit",
+  "provenance": {
+    "kind": "engine_snapshot",
+    "project": "ecsae"
+  },
+  "rationale": "Applicability, sparse cells, adjusted p, or rounding edge",
+  "schema_version": "2"
+}

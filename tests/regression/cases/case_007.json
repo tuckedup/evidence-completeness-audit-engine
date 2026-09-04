@@ -1,0 +1,24 @@
+{
+  "case_id": "REF-007",
+  "category": "external_statcheck_classification",
+  "expected": {
+    "consistent": false
+  },
+  "input": {
+    "df1": 28,
+    "p_decimals": 2,
+    "reported_p": 0.03,
+    "stat_type": "t",
+    "value": 2.2
+  },
+  "operation": "statcheck",
+  "provenance": {
+    "commit": "68376e18dc1c6f5c8a1e95b5146ec564c6c7ced9",
+    "kind": "literature",
+    "project": "statcheck",
+    "upstream_file": "tests/testthat/test-error.R",
+    "url": "https://github.com/MicheleNuijten/statcheck/blob/68376e18dc1c6f5c8a1e95b5146ec564c6c7ced9/tests/testthat/test-error.R",
+    "version": "1.6.1.9000"
+  },
+  "schema_version": "2"
+}

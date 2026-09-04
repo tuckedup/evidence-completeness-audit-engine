@@ -1,0 +1,24 @@
+{
+  "case_id": "REF-019",
+  "category": "external_scrutiny_grimmer",
+  "expected": {
+    "consistent": false
+  },
+  "input": {
+    "mean": 3.44,
+    "mean_decimals": 2,
+    "n": 18,
+    "sd": 2.47,
+    "sd_decimals": 2
+  },
+  "operation": "grimmer",
+  "provenance": {
+    "commit": "a81cd540332cf402c1ffc798f93534c31da17009",
+    "kind": "literature",
+    "project": "scrutiny",
+    "upstream_file": "R/grimmer.R and tests/testthat/test-grimmer.R",
+    "url": "https://github.com/lhdjung/scrutiny/blob/a81cd540332cf402c1ffc798f93534c31da17009/tests/testthat/test-grimmer.R",
+    "version": "0.6.1"
+  },
+  "schema_version": "2"
+}

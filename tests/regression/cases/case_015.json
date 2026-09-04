@@ -1,0 +1,23 @@
+{
+  "case_id": "REF-015",
+  "category": "external_scrutiny_grim",
+  "expected": {
+    "consistent": true
+  },
+  "input": {
+    "items": 2,
+    "mean": 2.84,
+    "mean_decimals": 2,
+    "n": 16
+  },
+  "operation": "grim",
+  "provenance": {
+    "commit": "a81cd540332cf402c1ffc798f93534c31da17009",
+    "kind": "literature",
+    "project": "scrutiny",
+    "upstream_file": "R/grim.R and tests/testthat/test-grim.R",
+    "url": "https://github.com/lhdjung/scrutiny/blob/a81cd540332cf402c1ffc798f93534c31da17009/tests/testthat/test-grim.R",
+    "version": "0.6.1"
+  },
+  "schema_version": "2"
+}

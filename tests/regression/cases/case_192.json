@@ -1,0 +1,39 @@
+{
+  "case_id": "REG-192",
+  "category": "completeness",
+  "expected": {
+    "completeness_score": 0.818182,
+    "config_version": "4eafe294bdd8de8b",
+    "feasibility_verdict": "warn",
+    "fingerprint": "3bafd7d1e1d5dd9ab79d7827d0fab4a93b2d084c0d4ce1d911d43f7724eed70a",
+    "flag_rule_ids": [],
+    "rules_version": "1.2.0"
+  },
+  "input_record": {
+    "analyzed_n": 100,
+    "arm_ns": {
+      "control": 50,
+      "intervention": 50
+    },
+    "randomized_n": 100,
+    "reporting": {
+      "conflicts_of_interest": true,
+      "data_sharing": false,
+      "effect_estimate": false,
+      "harms": true,
+      "patient_public_involvement": true,
+      "precision": true,
+      "primary_outcome": true,
+      "protocol_registration": true
+    },
+    "source": "versioned synthetic regression fixture",
+    "study_id": "REG-172"
+  },
+  "operation": "audit",
+  "provenance": {
+    "kind": "engine_snapshot",
+    "project": "ecsae"
+  },
+  "rationale": "Weighted applicable CONSORT reporting fields",
+  "schema_version": "2"
+}

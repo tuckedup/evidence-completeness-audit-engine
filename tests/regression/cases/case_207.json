@@ -1,0 +1,47 @@
+{
+  "case_id": "REG-207",
+  "category": "adversarial",
+  "expected": {
+    "completeness_score": 1.0,
+    "config_version": "4eafe294bdd8de8b",
+    "feasibility_verdict": "pass",
+    "fingerprint": "4620ad237d5c6297252f8c51b2b54cd5fa631ebb1366c720ae8b033bdaaddc87",
+    "flag_rule_ids": [],
+    "rules_version": "1.2.0"
+  },
+  "input_record": {
+    "analyzed_n": 150,
+    "arm_ns": {
+      "control": 75,
+      "intervention": 75
+    },
+    "integer_summaries": [
+      {
+        "mean": 2.34,
+        "mean_decimals": 2,
+        "n": 150,
+        "name": "large n"
+      }
+    ],
+    "randomized_n": 150,
+    "reporting": {
+      "conflicts_of_interest": true,
+      "data_sharing": true,
+      "effect_estimate": true,
+      "harms": true,
+      "patient_public_involvement": true,
+      "precision": true,
+      "primary_outcome": true,
+      "protocol_registration": true
+    },
+    "source": "versioned synthetic regression fixture",
+    "study_id": "REG-187"
+  },
+  "operation": "audit",
+  "provenance": {
+    "kind": "engine_snapshot",
+    "project": "ecsae"
+  },
+  "rationale": "Applicability, sparse cells, adjusted p, or rounding edge",
+  "schema_version": "2"
+}

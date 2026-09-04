@@ -1,0 +1,58 @@
+{
+  "case_id": "REG-205",
+  "category": "adversarial",
+  "expected": {
+    "completeness_score": 1.0,
+    "config_version": "4eafe294bdd8de8b",
+    "feasibility_verdict": "pass",
+    "fingerprint": "46a2dd5787daf5878b4f3a471f987fdfbd31a8a83c1a9c24851f8cb98ec2dae5",
+    "flag_rule_ids": [],
+    "rules_version": "1.2.0"
+  },
+  "input_record": {
+    "analyzed_n": 150,
+    "arm_ns": {
+      "control": 75,
+      "intervention": 75
+    },
+    "randomized_n": 150,
+    "reporting": {
+      "conflicts_of_interest": true,
+      "data_sharing": true,
+      "effect_estimate": true,
+      "harms": true,
+      "patient_public_involvement": true,
+      "precision": true,
+      "primary_outcome": true,
+      "protocol_registration": true
+    },
+    "source": "versioned synthetic regression fixture",
+    "study_id": "REG-185",
+    "subgroups": [
+      {
+        "levels": [
+          {
+            "n": 50,
+            "name": "a",
+            "percentage": 33.3,
+            "percentage_denominator": 150
+          },
+          {
+            "n": 100,
+            "name": "b",
+            "percentage": 66.7,
+            "percentage_denominator": 150
+          }
+        ],
+        "variable": "rounded percent"
+      }
+    ]
+  },
+  "operation": "audit",
+  "provenance": {
+    "kind": "engine_snapshot",
+    "project": "ecsae"
+  },
+  "rationale": "Applicability, sparse cells, adjusted p, or rounding edge",
+  "schema_version": "2"
+}

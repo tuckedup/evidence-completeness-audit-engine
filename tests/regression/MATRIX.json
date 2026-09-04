@@ -1,0 +1,24 @@
+{
+  "categories": {
+    "adversarial": 10,
+    "baseline": 20,
+    "completeness": 20,
+    "external_scrutiny_grim": 5,
+    "external_scrutiny_grimmer": 3,
+    "external_statcheck_classification": 6,
+    "external_statcheck_recompute": 6,
+    "grim": 30,
+    "grimmer": 25,
+    "interaction_power": 25,
+    "realistic": 10,
+    "statcheck": 30,
+    "subgroup_partition": 30
+  },
+  "engine_snapshots": 200,
+  "externally_anchored": 20,
+  "sources": {
+    "literature": 20,
+    "snapshot": 200
+  },
+  "total": 220
+}

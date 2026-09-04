@@ -1,0 +1,23 @@
+{
+  "case_id": "REF-006",
+  "category": "external_statcheck_recompute",
+  "expected": {
+    "absolute_tolerance": 1e-12,
+    "recomputed_p": 0.7719487040329371
+  },
+  "input": {
+    "df1": 28,
+    "stat_type": "Q",
+    "value": 22.2
+  },
+  "operation": "recompute_p",
+  "provenance": {
+    "commit": "68376e18dc1c6f5c8a1e95b5146ec564c6c7ced9",
+    "kind": "literature",
+    "project": "statcheck",
+    "upstream_file": "tests/testthat/test-compute-pvalues.R",
+    "url": "https://github.com/MicheleNuijten/statcheck/blob/68376e18dc1c6f5c8a1e95b5146ec564c6c7ced9/tests/testthat/test-compute-pvalues.R",
+    "version": "1.6.1.9000"
+  },
+  "schema_version": "2"
+}

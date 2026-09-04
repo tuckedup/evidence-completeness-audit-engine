@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ecsae"
+version = "1.2.0"
+description = "Evidence Completeness Statistical Audit Engine"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = { text = "MIT" }
+authors = [{ name = "ECSAE contributors" }]
+dependencies = [
+  "fastapi==0.116.1",
+  "gunicorn==23.0.0; platform_system != 'Windows'",
+  "hiredis==3.2.1",
+  "httpx==0.28.1",
+  "orjson==3.11.2",
+  "prometheus-fastapi-instrumentator==7.1.0",
+  "pydantic==2.11.7",
+  "pydantic-settings==2.10.1",
+  "redis==6.4.0",
+  "uvicorn[standard]==0.35.0",
+]
+
+[project.optional-dependencies]
+extract = [
+  "gliner==0.2.21",
+  "onnxruntime==1.22.1",
+  "transformers==4.55.2",
+]
+science = ["numpy==2.3.2", "scipy==1.16.1", "statsmodels==0.14.5"]
+test = [
+  "hypothesis==6.138.2",
+  "pytest==8.4.1",
+  "pytest-cov==6.2.1",
+  "pytest-xdist==3.8.0",
+]
+
+[project.scripts]
+ecsae = "ecsae.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ecsae"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+testpaths = ["tests"]
+markers = ["integration: tests requiring optional services"]
+
+[tool.coverage.run]
+branch = true
+source = ["ecsae"]
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100

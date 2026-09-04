@@ -3,6 +3,12 @@ name: reproducibility-validation
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+env:
+  PYTHONHASHSEED: "0"
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -11,19 +17,19 @@ jobs:
       matrix:
         run_id: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
-          cache: pip
-      - run: python -m pip install --upgrade pip==25.2 uv==0.8.17
-      - run: uv sync --frozen --extra test
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install uv
+      - run: uv sync --frozen --python 3.12 --extra test
       - name: Run tests and deterministic replay
         run: |
-          uv run pytest -q --junitxml=pytest-${{ matrix.run_id }}.xml
-          uv run ecsae rerun data/corpus/ctg-randomized-2000.jsonl --runs 2 \
+          uv run python -m pytest -q --junitxml=pytest-${{ matrix.run_id }}.xml --basetemp .pytest_tmp/repro-${{ matrix.run_id }}
+          uv run python -m ecsae.cli rerun data/corpus/ctg-randomized-2000.jsonl --runs 2 \
             --output rerun-${{ matrix.run_id }}.json
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: reproducibility-${{ matrix.run_id }}
           path: |

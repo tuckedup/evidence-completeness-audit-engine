@@ -1,0 +1,66 @@
+{
+  "schema_version": "3",
+  "generated_at": "2026-09-04T02:22:45.245Z",
+  "generator": "Node v24.19.0 built-in fetch; raw JSONL hit bodies",
+  "model": "open-loop fixed-rate; latency = completion - scheduled_send",
+  "run_id": "a2bbdbe3-3642-43c9-91a3-485ed1b8a9e5",
+  "scenario": "warm",
+  "expected_hit_fraction": 1,
+  "payload_source": "C:\\At\\Projects\\Statistical_Audit_Engine\\data\\corpus\\ctg-randomized-2000.jsonl",
+  "distinct_base_payloads": 2000,
+  "payload_sha256": "07f7c78355bab94e042fe9f827b0a0d30e31903ee5680fda2cc99c17e78f58dd",
+  "service_version": {
+    "service": "1.2.0",
+    "config": "4eafe294bdd8de8b",
+    "operations_config": "3e544897256246ed",
+    "model": "regex-biomed-v1",
+    "rules": "1.2.0"
+  },
+  "generator_and_server_colocated": true,
+  "server_workers": 1,
+  "url": "http://127.0.0.1:8002/audit",
+  "requested": 10000,
+  "completed": 9915,
+  "errors": 85,
+  "error_examples": [
+    "TypeError: fetch failed",
+    "TypeError: fetch failed",
+    "TypeError: fetch failed",
+    "TypeError: fetch failed",
+    "TypeError: fetch failed",
+    "TypeError: fetch failed",
+    "TypeError: fetch failed",
+    "TypeError: fetch failed",
+    "TypeError: fetch failed",
+    "TypeError: fetch failed"
+  ],
+  "target_rate_per_second": 1200,
+  "achieved_rate_per_second": 1143.7165493189264,
+  "duration_seconds": 8.669106,
+  "connections": 768,
+  "cache_headers": {
+    "hit": 9915
+  },
+  "latency_ms": {
+    "min": 1.3954333333335853,
+    "mean": 200.61575796940664,
+    "p50": 153.61686666666628,
+    "p95": 333.65320000000065,
+    "p99": 2031.3541999999998,
+    "max": 2510.882333333333
+  },
+  "server_handler_latency_ms": {
+    "observations": 9915,
+    "mean": 89.2243764699954,
+    "p50": 83.9386,
+    "p95": 223.8964,
+    "p99": 232.6215,
+    "max": 317.994
+  },
+  "client_to_server_p95_ratio": 1.4902124375380785,
+  "environment": {
+    "platform": "win32 10.0.26200",
+    "cpu_count": 16,
+    "node": "v24.19.0"
+  }
+}

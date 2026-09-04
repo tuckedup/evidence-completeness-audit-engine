@@ -1,0 +1,55 @@
+{
+  "schema_version": "3",
+  "generated_at": "2026-09-04T02:22:28.904Z",
+  "generator": "Node v24.19.0 built-in fetch; raw JSONL hit bodies",
+  "model": "open-loop fixed-rate; latency = completion - scheduled_send",
+  "run_id": "a544e995-07f3-41bf-8313-569402834405",
+  "scenario": "warm",
+  "expected_hit_fraction": 1,
+  "payload_source": "C:\\At\\Projects\\Statistical_Audit_Engine\\data\\corpus\\ctg-randomized-2000.jsonl",
+  "distinct_base_payloads": 2000,
+  "payload_sha256": "07f7c78355bab94e042fe9f827b0a0d30e31903ee5680fda2cc99c17e78f58dd",
+  "service_version": {
+    "service": "1.2.0",
+    "config": "4eafe294bdd8de8b",
+    "operations_config": "3e544897256246ed",
+    "model": "regex-biomed-v1",
+    "rules": "1.2.0"
+  },
+  "generator_and_server_colocated": true,
+  "server_workers": 1,
+  "url": "http://127.0.0.1:8002/audit",
+  "requested": 10000,
+  "completed": 10000,
+  "errors": 0,
+  "error_examples": [],
+  "target_rate_per_second": 1000,
+  "achieved_rate_per_second": 997.5489523955375,
+  "duration_seconds": 10.0245707,
+  "connections": 640,
+  "cache_headers": {
+    "hit": 10000
+  },
+  "latency_ms": {
+    "min": 1.2510999999999513,
+    "mean": 13.126564940000456,
+    "p50": 10.379100000000108,
+    "p95": 30.93820000000005,
+    "p99": 50.54290000000037,
+    "max": 71.08640000000014
+  },
+  "server_handler_latency_ms": {
+    "observations": 10000,
+    "mean": 4.439607759999995,
+    "p50": 3.0398,
+    "p95": 13.2304,
+    "p99": 21.1366,
+    "max": 53.481
+  },
+  "client_to_server_p95_ratio": 2.3384175837465273,
+  "environment": {
+    "platform": "win32 10.0.26200",
+    "cpu_count": 16,
+    "node": "v24.19.0"
+  }
+}

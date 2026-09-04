@@ -1,0 +1,33 @@
+FROM python:3.12.11-slim-bookworm AS builder
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1 PIP_NO_CACHE_DIR=1
+WORKDIR /build
+COPY pyproject.toml README.md ./
+COPY src ./src
+RUN python -m venv /opt/venv && /opt/venv/bin/pip install --upgrade pip==25.2 && \
+    /opt/venv/bin/pip install '.[extract]'
+
+ARG GLINER_MODEL_ID=Ihor/gliner-biomed-base-v1.0
+ARG GLINER_MODEL_REVISION=146c133ff9da643f738f9817bc38cee479cebe8c
+ENV HF_HOME=/models/hf
+RUN /opt/venv/bin/python -c "from huggingface_hub import snapshot_download; snapshot_download('${GLINER_MODEL_ID}', revision='${GLINER_MODEL_REVISION}', local_dir='/models/gliner')" && \
+  test -f /models/gliner/gliner_config.json && test -f /models/gliner/pytorch_model.bin
+
+FROM python:3.12.11-slim-bookworm AS runtime
+ARG GLINER_MODEL_REVISION=146c133ff9da643f738f9817bc38cee479cebe8c
+ENV PATH="/opt/venv/bin:$PATH" \
+    PYTHONHASHSEED=0 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    HF_HUB_OFFLINE=1 \
+    TRANSFORMERS_OFFLINE=1 \
+    ECSAE_TRANSFORMER_MODEL_PATH=/models/gliner \
+    ECSAE_TRANSFORMER_MODEL_REVISION=${GLINER_MODEL_REVISION}
+RUN groupadd --system ecsae && useradd --system --gid ecsae --home-dir /app ecsae
+COPY --from=builder /opt/venv /opt/venv
+COPY --from=builder --chown=ecsae:ecsae /models /models
+WORKDIR /app
+USER ecsae
+EXPOSE 8000
+HEALTHCHECK --interval=30s --timeout=3s --start-period=30s --retries=3 \
+  CMD ["python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/ready', timeout=2)"]
+CMD ["uvicorn", "ecsae.api.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1", "--no-access-log"]

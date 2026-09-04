@@ -1,0 +1,32 @@
+{
+  "study_id": "BENCH-001",
+  "randomized_n": 240,
+  "analyzed_n": 236,
+  "arm_ns": {"control": 120, "treatment": 120},
+  "subgroups": [
+    {
+      "variable": "sex",
+      "levels": [
+        {"name": "female", "n": 126, "arm_ns": {"control": 64, "treatment": 62}, "events": 36},
+        {"name": "male", "n": 110, "arm_ns": {"control": 54, "treatment": 56}, "events": 31}
+      ],
+      "exhaustive": true,
+      "effect_claimed": false,
+      "estimated_parameters": 2
+    }
+  ],
+  "reported_stats": [
+    {"stat_type": "t", "value": 2.35, "df1": 238, "reported_p": 0.02, "p_decimals": 3}
+  ],
+  "reporting": {
+    "primary_outcome": true,
+    "effect_estimate": true,
+    "precision": true,
+    "harms": true,
+    "protocol_registration": true,
+    "data_sharing": true,
+    "conflicts_of_interest": true,
+    "patient_public_involvement": true
+  }
+}
+

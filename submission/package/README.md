@@ -167,7 +167,7 @@ workspace evidence supports the implementation status below:
 - Determinism: 3 full-corpus runs, 4,000 comparisons, 0 mismatches (100.0% agreement).
 - Cached performance: 20,000/20,000 hydrated-corpus hits at 200 rps; client p95 **28.37 ms**, server p95 **1.83 ms**, 0 errors.
 - Matched load curves: cold client/server p95 4734.21/1153.45 ms; 90/10 mixed 36.65/7.63 ms with 18,000 hits and 2,000 misses.
-- Tests: **71 passed**; branch-aware coverage **90.13%**; regression matrix exactly 220 cases (20 literature-anchored + 200 snapshots).
+- Tests: **73 passed**; branch-aware coverage **90.15%**; regression matrix exactly 220 cases (20 literature-anchored + 200 snapshots).
 - Transformer smoke set: exact-span F1 **0.537**, with 0 rerun mismatches. This is runtime evidence, not clinical-corpus accuracy.
 - Agreement and release history: 93% agreement and 99.5% across 30 releases are **not claimed**; the 200-row two-reviewer queue and release-ledger gate remain pending.
 <!-- END GENERATED EVIDENCE -->

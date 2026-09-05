@@ -14,7 +14,7 @@ and the reproducibility docs.
   the per-study cap and accounted for separately.
 - A resolved baseline false-positive incident: warnings fell from 38 to 5 across 632 applicable
   studies after rounding-aware handling.
-- A versioned 220-case regression matrix, zero-mismatch rerun artifact, and a current 71-test
+- A versioned 220-case regression matrix, zero-mismatch rerun artifact, and a current 73-test
   passing suite.
 - A canonical cache-hit benchmark suite at 20,000 requests with warm, mixed, and cold results
   reported separately.

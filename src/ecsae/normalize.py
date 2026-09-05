@@ -22,7 +22,8 @@ def _clean(value: Any) -> Any:
         if value == 0.0:
             return 0.0
         # Normalize insignificant cross-platform float drift before hashing or snapshotting.
-        return float(f"{value:.15g}")
+        # Twelve significant digits still exceeds the printed precision accepted by the schemas.
+        return float(f"{value:.12g}")
     return value
 
 

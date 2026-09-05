@@ -43,8 +43,9 @@ jobs:
 
       - name: Run tests
         run: |
+          mkdir -p /tmp/pytest-${{ matrix.python-version }}
           uv run python -m pytest -q \
-            --basetemp .pytest_tmp/ci-${{ matrix.python-version }}
+            --basetemp /tmp/pytest-${{ matrix.python-version }}
 
   evidence:
     name: evidence

@@ -19,7 +19,10 @@ def _clean(value: Any) -> Any:
     if isinstance(value, float):
         if not math.isfinite(value):
             raise ValueError("NaN and infinity are not valid audit inputs")
-        return 0.0 if value == 0.0 else value
+        if value == 0.0:
+            return 0.0
+        # Normalize insignificant cross-platform float drift before hashing or snapshotting.
+        return float(f"{value:.15g}")
     return value
 
 

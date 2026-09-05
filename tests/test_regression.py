@@ -12,6 +12,17 @@ from ecsae.normalize import canonical_json
 from ecsae.stats import grim, grimmer, recompute_p, statcheck
 
 
+def test_canonical_json_stabilizes_floats() -> None:
+    payload = {"value": 0.014499999999999999, "zero": -0.0}
+    assert canonical_json(payload) == '{"value":0.0145,"zero":0.0}'
+
+
+def test_canonical_json_preserves_meaningful_float_changes() -> None:
+    left = {"p_value": 0.123456}
+    right = {"p_value": 0.124456}
+    assert canonical_json(left) != canonical_json(right)
+
+
 def test_exactly_220_versioned_golden_cases() -> None:
     paths = sorted((Path(__file__).parent / "regression" / "cases").glob("*.json"))
     assert len(paths) == 220

@@ -5,7 +5,7 @@
     "completeness_score": 1.0,
     "config_version": "4eafe294bdd8de8b",
     "feasibility_verdict": "flag",
-    "fingerprint": "816e01e92c00881461d7ad851bd3d59e88b72aba60c180b7ea6eb98d4e11ebb4",
+    "fingerprint": "5e3b4acbe2086258ed990f68158caa48b80e6ae4b0bb215372a13846364fda71",
     "flag_rule_ids": [
       "STATCHECK"
     ],

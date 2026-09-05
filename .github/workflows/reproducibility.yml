@@ -26,7 +26,8 @@ jobs:
       - run: uv sync --frozen --python 3.12 --extra test
       - name: Run tests and deterministic replay
         run: |
-          uv run python -m pytest -q --junitxml=pytest-${{ matrix.run_id }}.xml --basetemp .pytest_tmp/repro-${{ matrix.run_id }}
+          mkdir -p /tmp/pytest-repro-${{ matrix.run_id }}
+          uv run python -m pytest -q --junitxml=pytest-${{ matrix.run_id }}.xml --basetemp /tmp/pytest-repro-${{ matrix.run_id }}
           uv run python -m ecsae.cli rerun data/corpus/ctg-randomized-2000.jsonl --runs 2 \
             --output rerun-${{ matrix.run_id }}.json
       - uses: actions/upload-artifact@v6
